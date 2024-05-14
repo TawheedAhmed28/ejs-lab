@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% const categoryTitle = menuItems[0].category.charAt(0).toUpperCase() + menuItems[0].category.slice(1) %>   
+  <title><%= categoryTitle %></title>
+</head>
+<body>
+  <h1><%= categoryTitle %> Menu</h1>
+  <ul>
+    <% menuItems.forEach((menuItem) => { %>
+    <li><%= menuItem.name %>, priced at <%= menuItem.price %>, <%= menuItem.rating %> out of 5 stars - <%= menuItem.details %></li>
+    <% }) %>    
+  </ul>
+</body>
+</html>
